@@ -8,7 +8,6 @@ nwb = NWBFile('session_description', 'identifier', datetime.now().astimezone())
 lab_metadata = LabMetaData_ext(
     name='LabMetaData',
     cell_id='cell_id',
-    tissue_sample_id='tissue_sample_id',
 )
 
 # Add to file
