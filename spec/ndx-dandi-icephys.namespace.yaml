@@ -2,10 +2,10 @@ namespaces:
 - author: Luiz Tauffer and Ben Dichter
   contact: ben.dichter@gmail.com
   doc: type for storing lab metadata
-  name: ndx-labmetadata-abf
+  name: ndx-dandi-icephys
   schema:
   - namespace: core
     neurodata_types:
     - LabMetaData
-  - source: ndx-labmetadata-abf.extensions.yaml
+  - source: ndx-dandi-icephys.extensions.yaml
   version: 0.1.0

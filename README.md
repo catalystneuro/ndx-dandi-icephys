@@ -1,8 +1,8 @@
-# ndx-labmetadata-abf extension for NWB:N
+# ndx-dandi-icephys extension for NWB:N
 
 Extension of the [lab_meta_data](https://pynwb.readthedocs.io/en/stable/pynwb.file.html#pynwb.file.NWBFile.lab_meta_data) field.
 
-[![PyPI version](https://badge.fury.io/py/ndx-labmetadata-abf.svg)](https://badge.fury.io/py/ndx-labmetadata-abf)
+[![PyPI version](https://badge.fury.io/py/ndx-dandi-icephys.svg)](https://badge.fury.io/py/ndx-dandi-icephys)
 
 [Python Installation](#python-installation)
 
@@ -10,7 +10,7 @@ Extension of the [lab_meta_data](https://pynwb.readthedocs.io/en/stable/pynwb.fi
 
 ### Python Installation
 ```bash
-pip install ndx-labmetadata-abf
+pip install ndx-dandi-icephys
 ```
 
 ### Python Usage
@@ -18,13 +18,12 @@ pip install ndx-labmetadata-abf
 ```python
 from datetime import datetime
 from pynwb import NWBFile, NWBHDF5IO
-from ndx_labmetadata_abf import LabMetaData_ext
+from ndx_dandi_icephys import DandiIcephysMetadata
 
 nwb = NWBFile('session_description', 'identifier', datetime.now().astimezone())
 
 # Creates LabMetaData container
-lab_metadata = LabMetaData_ext(
-    name='LabMetaData',
+lab_metadata = DandiIcephysMetadata(
     cell_id='cell_id',
     tissue_sample_id='tissue_sample_id',
 )
@@ -39,5 +38,5 @@ with NWBHDF5IO('test_labmetadata.nwb', 'w') as io:
 # Read nwb file and check its content
 with NWBHDF5IO('test_labmetadata.nwb', 'r', load_namespaces=True) as io:
     nwb = io.read()
-    print(nwb.lab_meta_data['LabMetaData'])
+    print(nwb.lab_meta_data['DandiIcephysMetadata'])
 ```

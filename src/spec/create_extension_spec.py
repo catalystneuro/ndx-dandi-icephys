@@ -4,7 +4,7 @@ import os
 
 def main():
     ns_builder = NWBNamespaceBuilder(doc='type for storing lab metadata',
-                                     name='ndx-labmetadata-abf',
+                                     name='ndx-dandi-icephys',
                                      version='0.1.1',
                                      author='Luiz Tauffer and Ben Dichter',
                                      contact='ben.dichter@gmail.com')
@@ -12,8 +12,9 @@ def main():
     ns_builder.include_type('LabMetaData', namespace='core')
 
     LabMetaData_ext = NWBGroupSpec(
+        name='DandiIcephysMetadata',
         doc='type for storing lab metadata',
-        neurodata_type_def='LabMetaData_ext',
+        neurodata_type_def='DandiIcephysMetadata',
         neurodata_type_inc='LabMetaData',
     )
 
@@ -21,14 +22,14 @@ def main():
         name='cell_id',
         doc='Cell id.',
         dtype='text',
-        shape=None,
+        required=False
     )
 
     LabMetaData_ext.add_attribute(
         name='tissue_sample_id',
         doc='Tissue sample id.',
         dtype='text',
-        shape=None,
+        required=False
     )
 
     new_data_types = [LabMetaData_ext]

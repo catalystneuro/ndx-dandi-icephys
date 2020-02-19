@@ -8,9 +8,9 @@ with open(os.path.join(here, 'README.md')) as f:
     long_description = f.read()
 
 setup_args = {
-    'name': 'ndx-labmetadata-abf',
+    'name': 'ndx-dandi-icephys',
     'version': '0.1.1',
-    'description': 'LabMetaData extension.',
+    'description': 'DandiIcephysMetadata extension.',
     'long_description': long_description,
     'long_description_content_type': 'text/markdown',
     'author': 'Luiz Tauffer and Ben Dichter',
@@ -20,9 +20,9 @@ setup_args = {
     'install_requires': ['pynwb>=1.0.2'],
     'packages': find_packages('src/pynwb'),
     'package_dir': {'': 'src/pynwb'},
-    'package_data': {'ndx_labmetadata_giocomo': [
-        'spec/ndx-labmetadata-abf.namespace.yaml',
-        'spec/ndx-labmetadata-abf.extensions.yaml',
+    'package_data': {'ndx_dandi_icephys': [
+        'spec/ndx-dandi-icephys.namespace.yaml',
+        'spec/ndx-dandi-icephys.extensions.yaml',
     ]},
     'classifiers': [
         "Intended Audience :: Developers",
@@ -33,10 +33,10 @@ setup_args = {
 
 
 def _copy_spec_files(project_dir):
-    ns_path = os.path.join(project_dir, 'spec', 'ndx-labmetadata-abf.namespace.yaml')
-    ext_path = os.path.join(project_dir, 'spec', 'ndx-labmetadata-abf.extensions.yaml')
+    ns_path = os.path.join(project_dir, 'spec', 'ndx-dandi-icephys.namespace.yaml')
+    ext_path = os.path.join(project_dir, 'spec', 'ndx-dandi-icephys.extensions.yaml')
 
-    dst_dir = os.path.join(project_dir, 'src', 'pynwb', 'ndx_labmetadata_abf', 'spec')
+    dst_dir = os.path.join(project_dir, 'src', 'pynwb', 'ndx_dandi_icephys', 'spec')
     if not os.path.exists(dst_dir):
         os.mkdir(dst_dir)
 

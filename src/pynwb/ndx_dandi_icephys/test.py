@@ -1,6 +1,6 @@
 from datetime import datetime
 from pynwb import NWBFile, NWBHDF5IO
-from ndx_labmetadata_abf import LabMetaData_ext
+from ndx_dandi_icephys import LabMetaData_ext
 
 nwb = NWBFile('session_description', 'identifier', datetime.now().astimezone())
 
