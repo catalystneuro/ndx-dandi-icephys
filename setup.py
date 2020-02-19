@@ -4,13 +4,15 @@ from shutil import copy2
 import os
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(os.path.join(here, 'README.md')) as f:
     long_description = f.read()
 
 setup_args = {
     'name': 'ndx-labmetadata-abf',
     'version': '0.1.0',
     'description': 'LabMetaData extension.',
+    'long_description': long_description,
+    'long_description_content_type': 'text/markdown',
     'author': 'Luiz Tauffer and Ben Dichter',
     'author_email': 'ben.dichter@gmail.com',
     'url': '',
