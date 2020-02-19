@@ -6,6 +6,3 @@ groups:
   - name: cell_id
     dtype: text
     doc: Cell id.
-  - name: tissue_sample_id
-    dtype: text
-    doc: Tissue sample id.
