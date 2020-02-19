@@ -1,2 +1,2 @@
-pynwb
+pynwb>=1.0.2
 nwb_docutils

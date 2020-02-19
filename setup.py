@@ -9,7 +9,7 @@ with open(os.path.join(here, 'README.md')) as f:
 
 setup_args = {
     'name': 'ndx-labmetadata-abf',
-    'version': '0.1.0',
+    'version': '0.1.1',
     'description': 'LabMetaData extension.',
     'long_description': long_description,
     'long_description_content_type': 'text/markdown',
@@ -17,7 +17,7 @@ setup_args = {
     'author_email': 'ben.dichter@gmail.com',
     'url': '',
     'license': '',
-    'install_requires': ['pynwb'],
+    'install_requires': ['pynwb>=1.0.2'],
     'packages': find_packages('src/pynwb'),
     'package_dir': {'': 'src/pynwb'},
     'package_data': {'ndx_labmetadata_giocomo': [
