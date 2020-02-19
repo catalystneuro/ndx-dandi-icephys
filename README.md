@@ -2,7 +2,7 @@
 
 Extension of the [lab_meta_data](https://pynwb.readthedocs.io/en/stable/pynwb.file.html#pynwb.file.NWBFile.lab_meta_data) field.
 
-[![PyPI version]()
+[![PyPI version](https://badge.fury.io/py/ndx-labmetadata-abf.svg)](https://badge.fury.io/py/ndx-labmetadata-abf)
 
 [Python Installation](#python-installation)
 
@@ -10,7 +10,7 @@ Extension of the [lab_meta_data](https://pynwb.readthedocs.io/en/stable/pynwb.fi
 
 ### Python Installation
 ```bash
-pip install git+https://github.com/ben-dichter-consulting/ndx-labmetadata-abf.git
+pip install ndx-labmetadata-abf
 ```
 
 ### Python Usage
