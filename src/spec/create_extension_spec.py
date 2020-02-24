@@ -5,7 +5,7 @@ import os
 def main():
     ns_builder = NWBNamespaceBuilder(doc='type for storing lab metadata',
                                      name='ndx-dandi-icephys',
-                                     version='0.1.1',
+                                     version='0.2.0',
                                      author='Luiz Tauffer and Ben Dichter',
                                      contact='ben.dichter@gmail.com')
 
@@ -21,6 +21,13 @@ def main():
     LabMetaData_ext.add_attribute(
         name='cell_id',
         doc='Cell id.',
+        dtype='text',
+        required=False
+    )
+
+    LabMetaData_ext.add_attribute(
+        name='slice_id',
+        doc='Slice id.',
         dtype='text',
         required=False
     )

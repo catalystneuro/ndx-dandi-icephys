@@ -7,8 +7,12 @@ groups:
   - name: cell_id
     dtype: text
     doc: Cell id.
-    required: False
+    required: false
+  - name: slice_id
+    dtype: text
+    doc: Slice id.
+    required: false
   - name: tissue_sample_id
     dtype: text
     doc: Tissue sample id.
-    required: False
+    required: false

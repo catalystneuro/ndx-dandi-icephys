@@ -1,13 +1,12 @@
 from datetime import datetime
 from pynwb import NWBFile, NWBHDF5IO
-from ndx_dandi_icephys import LabMetaData_ext
+from ndx_dandi_icephys import DandiIcephysMetdata
 
 nwb = NWBFile('session_description', 'identifier', datetime.now().astimezone())
 
 # Creates LabMetaData container
-lab_metadata = LabMetaData_ext(
-    name='LabMetaData',
-    cell_id='cell_id',
+lab_metadata = DandiIcephysMetdata(
+    cell_id='my_cell_id',
 )
 
 # Add to file
@@ -20,4 +19,4 @@ with NWBHDF5IO('test_labmetadata.nwb', 'w') as io:
 # Read nwb file and check its content
 with NWBHDF5IO('test_labmetadata.nwb', 'r', load_namespaces=True) as io:
     nwb = io.read()
-    print(nwb.lab_meta_data['LabMetaData'])
+    assert(nwb.lab_meta_data['DandiIcephysMetadata']['cell_id'] == 'my_cell_id')
