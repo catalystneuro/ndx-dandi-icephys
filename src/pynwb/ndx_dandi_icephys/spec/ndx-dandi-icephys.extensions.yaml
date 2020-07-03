@@ -3,16 +3,104 @@ groups:
   neurodata_type_inc: LabMetaData
   name: DandiIcephysMetadata
   doc: type for storing lab metadata
-  attributes:
+  datasets:
   - name: cell_id
     dtype: text
-    doc: Cell id.
-    required: false
+    doc: cell id
+    quantity: '?'
   - name: slice_id
     dtype: text
-    doc: Slice id.
-    required: false
+    doc: slice id
+    quantity: '?'
   - name: tissue_sample_id
     dtype: text
-    doc: Tissue sample id.
-    required: false
+    doc: tissue sample id
+    quantity: '?'
+  - name: targeted_layer
+    dtype: int
+    doc: targeted layer
+    quantity: '?'
+  - name: exon_reads
+    dtype: int
+    doc: exon reads
+    quantity: '?'
+  - name: intron_reads
+    dtype: int
+    doc: intron reads
+    quantity: '?'
+  - name: intergenic_reads
+    dtype: int
+    doc: intergenic reads
+    quantity: '?'
+  - name: sequencing_batch
+    dtype: int
+    doc: sequencing batch
+    quantity: '?'
+  - name: number_of_genes_detected
+    dtype: int
+    doc: number of genes detected
+    quantity: '?'
+  - name: RNA_family
+    dtype: text
+    doc: RNA family
+    quantity: '?'
+  - name: RNA_type
+    dtype: text
+    doc: RNA type
+    quantity: '?'
+  - name: RNA_type_confidence
+    dtype: float
+    doc: RNA type confidence
+    quantity: '?'
+  - name: RNA_type_top3
+    dtype: text
+    doc: RNA type top3
+    quantity: '?'
+  - name: ALM_VISp_top3
+    dtype: text
+    doc: ALM VISp top3
+    quantity: '?'
+  - name: length
+    dtype: int
+    doc: length in pb
+    quantity: '?'
+  - name: yield
+    dtype: int
+    doc: yield in (pg/ul)
+    quantity: '?'
+  - name: hold_time
+    dtype: int
+    doc: hold time in (min)
+    quantity: '?'
+  - name: soma_depth_4x
+    dtype: float
+    doc: soma depth 4x
+    quantity: '?'
+  - name: soma_depth_um
+    dtype: float
+    doc: soma depth um
+    quantity: '?'
+  - name: cortical_thickness_4x
+    dtype: float
+    doc: cortical thickness 4x
+    quantity: '?'
+  - name: cortical_thickness_um
+    dtype: float
+    doc: cortical thickness um
+    quantity: '?'
+  - name: traced
+    dtype: text
+    doc: traced
+    quantity: '?'
+  - name: exclusion_reason
+    dtype: text
+    doc: exclusion reason
+    quantity: '?'
+- neurodata_type_def: CreSubject
+  neurodata_type_inc: Subject
+  doc: subject with Cre information
+  datasets:
+  - name: cre
+    dtype: text
+    doc: cre type
+    quantity: '?'
